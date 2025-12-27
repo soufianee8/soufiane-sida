@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>حول مرض السيدا - نادي الصحي</title>
+  <style>
+    :root{
+      --blue:#0b63d4;
+      --bg:#ffffff;
+      --text:#111;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: "Segoe UI", Tahoma, "Noto Naskh Arabic", Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      direction:rtl;
+    }
+
+    .container{
+      max-width:900px;
+      margin:32px auto;
+      padding:28px;
+      background:var(--bg);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      border-radius:10px;
+    }
+
+    /* Header / تقديم */
+    header .developer{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:8px;
+    }
+    .developer .label{
+      background:var(--blue);
+      color:#fff;
+      padding:6px 10px;
+      border-radius:6px;
+      font-weight:700;
+    }
+    .developer .name{
+      font-size:1.3rem;
+      font-weight:700;
+      color:var(--blue);
+    }
+
+    .intro{
+      margin:12px 0 22px;
+      line-height:1.6;
+    }
+    .intro .by{
+      font-weight:600;
+      color:#222;
+      margin-bottom:6px;
+    }
+    .intro .title{
+      font-size:1.6rem;
+      font-weight:800;
+      color:var(--blue);
+      margin:6px 0;
+    }
+    .intro .subtitle{
+      font-size:1.1rem;
+      color:#333;
+      margin-top:6px;
+    }
+
+    /* FAQ list */
+    .faq{
+      margin-top:18px;
+    }
+    .q{
+      width:100%;
+      text-align:right;
+      background:transparent;
+      border:2px solid transparent;
+      padding:14px 16px;
+      font-size:1.05rem;
+      font-weight:700;
+      color:var(--blue);
+      cursor:pointer;
+      border-radius:8px;
+      transition:background .15s, transform .06s;
+    }
+    .q:hover{
+      background:rgba(11,99,212,0.06);
+    }
+    .q[aria-expanded="true"]{
+      background:rgba(11,99,212,0.08);
+    }
+
+    .answer{
+      display:none;
+      padding:12px 16px 18px 16px;
+      margin-top:8px;
+      border-radius:8px;
+      background:#fafafa;
+      color:#111;
+      line-height:1.6;
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    /* bottom glowing credits */
+    .credits{
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px dashed rgba(0,0,0,0.06);
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      align-items:center;
+    }
+
+    .glow{
+      font-weight:800;
+      font-size:0.98rem;
+      color:#fff;
+      padding:6px 12px;
+      border-radius:6px;
+      background:linear-gradient(90deg,#ff7a18,#af002d,#319197);
+      box-shadow:0 0 18px rgba(159,47,100,0.35);
+      animation:glowPulse 2.6s ease-in-out infinite;
+    }
+    @keyframes glowPulse{
+      0%{ filter:brightness(0.95); box-shadow:0 0 8px rgba(159,47,100,0.15); }
+      50%{ filter:brightness(1.06); box-shadow:0 0 28px rgba(159,47,100,0.35); }
+      100%{ filter:brightness(0.95); box-shadow:0 0 8px rgba(159,47,100,0.15); }
+    }
+
+    /* small responsive */
+    @media (max-width:520px){
+      .container{ padding:18px; margin:18px; }
+      .intro .title{ font-size:1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="developer" aria-hidden="false">
+        <div class="label">المطور</div>
+        <div class="name">سفيان</div>
+      </div>
+
+      <div class="intro" aria-label="التقديم">
+        <div class="by">تم تطوير هذا الموقع من طرف سفيان المطيشي</div>
+        <div class="title">حول مرض السيدا</div>
+        <div class="subtitle">لنادي الصحي</div>
+      </div>
+    </header>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" style="font-size:1.15rem; margin:6px 0 12px; color:#222;">الأسئلة المطروحة على مرض السيدا</h2>
+
+      <!-- Question 1 -->
+      <button class="q" aria-expanded="false" aria-controls="a1" id="q1">كيف ينتقل مرض السيدا؟</button>
+      <div id="a1" class="answer" role="region" aria-labelledby="q1">
+        ينتقل فيروس نقص المناعة البشرية (HIV) عبر سوائل الجسم المصابة مثل: الدم، السائل المنوي، الإفرازات المهبلية، وحليب الأم. أمثلة لطرق الانتقال: العلاقات الجنسية غير المحمية، مشاركة الإبر الملوثة، نقل الدم غير المفلتر أو أدوات طبية ملوثة، وانتقال من الأم إلى الطفل أثناء الحمل أو الولادة أو الرضاعة. لا ينتقل عن طريق المصافحة أو العناق أو مشاركة أدوات الطعام أو السعال والقبلات العادية.
+      </div>
+
+      <!-- Question 2 -->
+      <button class="q" aria-expanded="false" aria-controls="a2" id="q2">ما هي أعراض مرض سيدا؟</button>
+      <div id="a2" class="answer" role="region" aria-labelledby="q2">
+        تختلف الأعراض حسب مرحلة العدوى. في المرحلة المبكرة قد تظهر أعراض شبيهة بالإنفلونزا (حمى، تعب، صداع، تضخم الغدد). بعد ذلك قد تكون فترات طويلة بدون أعراض ظاهرة. مع تقدم المرض وحدوث الإيدز قد تظهر فقدان وزن، حمى مستمرة، تعرق ليلي، إسهال مزمن، عدوى متكررة أو غير مألوفة وأمراض انتهازية. الفحص الطبي هو الطريقة المؤكدة لتشخيص الإصابة.
+      </div>
+
+      <!-- Question 3 -->
+      <button class="q" aria-expanded="false" aria-controls="a3" id="q3">وكيفية الحماية من هذا المرض؟</button>
+      <div id="a3" class="answer" role="region" aria-labelledby="q3">
+        إجراءات الوقاية: استخدام الواقي الذكري أثناء العلاقة الجنسية، الفحص المنتظم (وخاصة للشركاء المتعددين)، عدم مشاركة الإبر أو أدوات تعاطي المخدرات، التأكد من فحص الدم والأدوات الطبية، برامج الوقاية الدوائية مثل PrEP للأشخاص المعرضين لخطر عالي، الوقاية من انتقال العدوى من الأم للطفل عبر المتابعة والعلاج أثناء الحمل. لا يوجد لقاح فعال معتمد حتى الآن.
+      </div>
+
+      <!-- Question 4 -->
+      <button class="q" aria-expanded="false" aria-controls="a4" id="q4">وكيف يمكنك العلاج منه؟</button>
+      <div id="a4" class="answer" role="region" aria-labelledby="q4">
+        لا يزال الفيروس غير قابل للشفاء التام حتى الآن، لكن هناك علاجات فعالة جداً تسمى العلاج المضاد للفيروسات القهقرية (Antiretroviral Therapy - ART). هذه الأدوية تخفض كمية الفيروس في الدم إلى مستوى لا يمكن اكتشافه وتساعد على الحفاظ على جهاز مناعة قوي، مما يجعل المريض يعيش حياة طويلة وصحية ويقلل من احتمال نقل الفيروس للآخرين عند الالتزام بالعلاج.
+      </div>
+
+      <!-- Question 5 -->
+      <button class="q" aria-expanded="false" aria-controls="a5" id="q5">وكيف يتكون هذا المرض ؟</button>
+      <div id="a5" class="answer" role="region" aria-labelledby="q5">
+        يتسبب فيروس HIV في غزو خلايا جهاز المناعة (خصوصاً خلايا CD4). يتكاثر الفيروس داخل هذه الخلايا ويؤدي إلى تدميرها بمرور الوقت، مما يضعف قدرة الجسم على مقاومة العدوى والأمراض. بعد سنوات من العدوى غير المعالجة، ينخفض عدد خلايا CD4 ويؤدي ذلك إلى تطور الحالة إلى الإيدز (SIDA) حيث تظهر التهابات وانتهازية خطيرة.
+      </div>
+
+      <!-- Question 6 -->
+      <button class="q" aria-expanded="false" aria-controls="a6" id="q6">ماذا يصيب هذا المرض في الجسم؟</button>
+      <div id="a6" class="answer" role="region" aria-labelledby="q6">
+        يهاجم المرض الجهاز المناعي ويقلل من فعاليته؛ نتيجة لذلك يصبح الجسم عرضة لالتهابات بكتيرية وفطرية وفيروسية وانتهازية، كما يزداد خطر بعض أنواع السرطان. تأثيرات أخرى قد تشمل فقدان الوزن، الإرهاق المزمن ومشاكل في الجهاز العصبي إذا لم يتلق المريض العلاج المناسب.
+      </div>
+
+      <!-- Question 7 -->
+      <button class="q" aria-expanded="false" aria-controls="a7" id="q7">لماذا هذا المرض خطير؟</button>
+      <div id="a7" class="answer" role="region" aria-labelledby="q7">
+        خطورة المرض تكمن في قدرته على إضعاف الجهاز المناعي تدريجياً، مما يترك الجسم غير قادر على مقاومة العدوى والأمراض التي قد تكون بسيطة لغير المصابين لكنها خطيرة أو مميتة لمرضى الإيدز. بدون علاج يؤدي ذلك إلى مضاعفات خطيرة وموت. ومع ذلك، العلاج المبكر والالتزام به يقللان كثيراً من المخاطر.
+      </div>
+
+      <!-- Extra note -->
+      <div style="margin-top:14px; color:#444; font-size:0.98rem;">
+        ولمزيد من الأسئلة الشائعة حول هذا المرض يمكنكم زيارة المراكز الصحية أو المراجع الطبية الموثوقة أو التواصل مع الطاقم الصحي للنادي.
+      </div>
+    </section>
+
+    <div class="credits" role="contentinfo" aria-label="حقوق وإنشاء">
+      <div class="glow">تم الإنشاء من قبل المطور سفيان بتاريخ 2025/12/27</div>
+      <div class="glow">By: soufiane elmattichi</div>
+    </div>
+  </main>
+
+  <script>
+    // تفعيل ظهور / إخفاء الأجوبة عند الضغط (أكورديون بسيط)
+    document.querySelectorAll('.q').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        const ans = document.getElementById(btn.getAttribute('aria-controls'));
+        if(!expanded){
+          ans.style.display = 'block';
+        } else {
+          ans.style.display = 'none';
+        }
+        // تمرير الشاشة إلى القسم المفتوح لتحسين التجربة على الهواتف
+        if(!expanded){
+          setTimeout(()=> btn.scrollIntoView({behavior:'smooth', block:'center'}), 80);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
